@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker | Color Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="toast-container"></div>
+
+    <div class="container">
+      <section class="section1">
+        <div class="display-header">
+          <h4>Display Color</h4>
+          <button id="random-color-btn">Random Color</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="main" id="display"></div>
+      </section>
+
+      <section class="section-two">
+        <div class="section-two-header">
+          <h4>Change & Copy Color</h4>
+          <div class="btn-container">
+            <button id="save-btn">save</button>
+            <button id="copy-btn">copy</button>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="copy-mode">
+          <h5>Select Copy Mode</h5>
+          <div class="copy-anyone">
+            <input type="radio" name="copy-mode" id="hex" value="hex" checked />
+            <label for="hex">Hex</label>
+            <input type="radio" name="copy-mode" id="rgb" value="rgb" />
+            <label for="rgb">RGB</label>
+          </div>
+        </div>
+
+        <div class="color-code-output">
+          <div class="hex-group color-input">
+            <label> HEX</label><br />
+            <div class="hex-icon">#</div>
+            <input
+              type="text"
+              class="output"
+              id="show-hex-code"
+              maxlength="6"
+            />
+          </div>
+
+          <div class="rgb-group color-input">
+            <label> RGB</label>
+            <br />
+            <input
+              type="text"
+              value="rgb(170,170,170)"
+              disabled
+              class="output2"
+              id="show-rgb-code"
+            />
+          </div>
+        </div>
+
+        <div class="color-adjustment">
+          <h4>Adjustment RGB Colors</h4>
+          <div class="color-slide">
+            <div class="red item">
+              <div class="red-header">
+                <p>Red</p>
+                <p id="red-label">225</p>
+              </div>
+              <input
+                type="range"
+                name="red"
+                id="red"
+                min="0"
+                max="250"
+                value="240"
+              />
+            </div>
+            <div class="green item">
+              <div class="red-header">
+                <p>Green</p>
+                <p id="green-label">225</p>
+              </div>
+              <input
+                type="range"
+                name="green"
+                id="green"
+                min="0"
+                max="250"
+                value="190"
+              />
+            </div>
+
+            <div class="blue item">
+              <div class="red-header">
+                <p>Blue</p>
+                <p id="blue-label">225</p>
+              </div>
+              <input
+                type="range"
+                name="red"
+                id="blue"
+                min="0"
+                max="250"
+                value="130"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="preset-color">
+        <h4>Preset Color palette</h4>
+        <div class="divider"></div>
+        <div class="preset-palette-container"></div>
+      </section>
+
+      <section class="custorm-preset-section">
+        <h4>Custom Color palette</h4>
+        <div class="divider"></div>
+        <div class="custom-preset-container"></div>
+      </section>
+
+      <section class="bg-section">
+        <h3>Background Preferences</h3>
+        <div class="divider"></div>
+        <div class="bg-main-container">
+          <div class="bg-prev-section">
+            <h5>Preview Changes</h5>
+            <div class="view-background"></div>
+            <div class="upload-btn-container">
+              <input
+                type="file"
+                name="bg"
+                id="bg-upload-field"
+                accept="image/*"
+              />
+              <button id="bg-upload-btn">Upload</button>
+              <button id="bg-remove-btn">Remove</button>
+            </div>
+          </div>
+
+          <div class="bg-controller-section">
+            <div class="bg-controller">
+              <div class="bg-size">
+                <label for="bgSize">Background Size</label><br />
+                <select name="bgSize" id="bgSize">
+                  <option value="auto">auto</option>
+                  <option value="inherit">inherit</option>
+                  <option value="contain">contain</option>
+                  <option value="cover">cover</option>
+                </select>
+              </div>
+              <div class="bg-repeat">
+                <label for="bgRepeat">Background Repeat</label><br />
+                <select name="bgRepeat" id="bgRepeat">
+                  <option value="repeat">repeat</option>
+                  <option value="no-repeat">no-repeat</option>
+                  <option value="space">space</option>
+                  <option value="round">round</option>
+                </select>
+              </div>
+
+              <div class="bg-position">
+                <label for="bgPosition">Background Position</label><br />
+                <select name="bgPosition" id="bgPosition">
+                  <option value="initial">initial</option>
+                  <option value="inherit">inherit</option>
+                  <option value="left top">left top</option>
+                  <option value="left center">left center</option>
+                  <option value="right top">right top</option>
+                  <option value="right center">right center</option>
+                  <option value="right bottom">right bottom</option>
+                  <option value="center top">center top</option>
+                  <option value="center center">center center</option>
+                  <option value="center top">center bottom</option>
+                </select>
+              </div>
+
+              <div class="bg-attachment">
+                <label for="bgAttachment">Background Attachment</label><br />
+                <select name="bgAttachment" id="bgAttachment">
+                  <option value="initial">initial</option>
+                  <option value="scroll">scroll</option>
+                  <option value="fixed">fixed</option>
+                  <option value="local">local</option>
+                  <option value="round">inherit</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

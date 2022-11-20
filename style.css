@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.color-adjustment > h4 {
+  padding: 2rem 0rem 9px;
+}
+
+body {
+  background: #ddd;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  margin: 10px 0px;
+}
+.main {
+  background-color: #aaa;
+  width: 100%;
+  height: 18vh;
+}
+
+.container {
+  max-width: 30rem;
+  background-color: white;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.display-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#random-color-btn {
+  color: brown;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+
+.divider {
+  background-color: #ddd;
+  width: 100%;
+  height: 1px;
+  margin: 8px 0px;
+}
+
+.section-two-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 12px 0px 0px;
+}
+
+#copy-btn {
+  color: brown;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: white;
+  border: none;
+}
+
+#save-btn {
+  color: brown;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: white;
+  border: none;
+  margin: 0px 10px;
+}
+
+label {
+  user-select: none;
+}
+.copy-mode {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0px;
+}
+
+.color-code-output {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hex-icon {
+  background-color: rgb(236, 231, 231);
+  width: 20px;
+  font-weight: 600;
+  position: absolute;
+  height: 22.5px;
+  top: 21.7px;
+  left: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px 0px 0px 3px;
+}
+.output {
+  padding: 2px 0px 2px 22px;
+}
+
+.output2 {
+  padding: 2px;
+}
+
+#output2:disabled {
+  background-color: white;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+.color-input {
+  width: 100%;
+  position: relative;
+}
+
+.color-input > input {
+  width: 98%;
+  margin-top: 5px;
+}
+
+.color-input > label {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.color-slide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.red-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.red-header > p {
+  font-size: 10px;
+}
+.item {
+  margin: 5px;
+}
+
+.item > input {
+  width: 100%;
+}
+
+.toast-message-slide-in {
+  animation: toast-animation-in 0.5s ease-in;
+}
+
+.toast-message-slide-out {
+  animation: toast-animation-out 0.5s ease-in;
+}
+
+.toast-container {
+  display: grid;
+  align-items: end;
+  gap: 1rem;
+  position: fixed;
+  z-index: 999;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.toast {
+  font-weight: bold;
+  padding: 10px 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px 0px black;
+  animation: toast-animation 3000ms forwards;
+}
+
+@keyframes toast-animation {
+  0%,
+  100% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  10%,
+  90% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.preset-palette-container,
+.custom-preset-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+  margin-top: 1rem;
+}
+
+.preset-color-box {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.preset-color {
+  margin: 1rem 0px;
+}
+
+.bg-section > h3 {
+  margin-top: 18px;
+}
+
+.bg-prev-section > h5 {
+  margin: 8px 0px;
+}
+
+.bg-main-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.view-background {
+  background-color: #abcdef;
+  height: 7rem;
+  border-radius: 5px;
+}
+
+input#bg-upload-field {
+  display: none;
+}
+
+.upload-btn-container {
+  margin: 10px 0px;
+}
+
+button#bg-upload-btn,
+#bg-remove-btn {
+  padding: 10px;
+  border: none;
+  background: #dde;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#bg-remove-btn {
+  display: none;
+}
+
+.bg-prev-section {
+  width: 45%;
+}
+
+.bg-controller label {
+  font-weight: bold;
+}
+
+.bg-controller {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  visibility: hidden;
+}
+
+.bg-controller select,
+option {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 10px 0px;
+  border: 1px solid lightblue;
+}
+.bg-controller select:focus {
+  outline: 2px solid #abcdef;
+}
